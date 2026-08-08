@@ -20,7 +20,7 @@
             color: #333;
             line-height: 1.8;
             margin: 0;
-            padding: 30px 15px 100px 15px; /* רווח בתחתית בגלל החלונית הצפה */
+            padding: 30px 15px 100px 15px;
         }
 
         .container {
@@ -28,7 +28,6 @@
             margin: 0 auto;
         }
 
-        /* כותרת מטורללת עם אוואטר */
         header {
             background: linear-gradient(135deg, #0a1128, #101f42, #1e3a8a);
             color: white;
@@ -85,7 +84,6 @@
             margin-top: 30px;
         }
 
-        /* סכמות ויזואליות למתחילים */
         .diagram-container {
             background: #0a1128;
             border: 2px dashed var(--accent);
@@ -102,7 +100,6 @@
             max-height: 250px;
         }
 
-        /* משבצת ה-SVG והתוצאה הסופית */
         .preview-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -168,7 +165,6 @@
             font-weight: bold;
         }
 
-        /* חלונית צפה (Floating Widget) */
         .floating-bot {
             position: fixed;
             bottom: 25px;
@@ -212,7 +208,6 @@
 
 <div class="container">
 
-    <!-- כותרת ראשית כולל האוואטר -->
     <header>
         <div class="header-content">
             <h1>מדריך עיצוב מעשי: סמל ליגת העל בכדורגל</h1>
@@ -221,7 +216,6 @@
         <img class="avatar-header" src="https://lh3.googleusercontent.com/d/1BHxytxfATgrv3wpk_8slqpRX08p2Dzml" alt="Avatar">
     </header>
 
-    <!-- מבוא למעצב המתחיל -->
     <div class="card">
         <h2>🏆 עקרונות העיצוב של סמל ספורט יוקרתי</h2>
         <p>סמל ספורט רשמי כמו **ליגת העל** צריך לשדר יוקרה, דינמיות, כוח וממלכתיות. כדי להשיג את התחושה הזו אנו משתמשים ב-4 אלמנטים עיצוביים מרכזיים:</p>
@@ -233,7 +227,6 @@
         </ul>
     </div>
 
-    <!-- חלק 1: בניית המגן -->
     <div class="card">
         <h2>חלק א': בניית המגן והרקע הדינמי</h2>
         
@@ -245,11 +238,9 @@
             <li>בנה **מגן פנימי** מעט קטן יותר, ומלא אותו במעבר צבע מטאלי מתכהה (כחול עמוק <span class="color-badge" style="background:#1e3a8a;">#1e3a8a</span> עד כחול כהה).</li>
         </ol>
 
-        <!-- סכמה שלב 1.1 -->
         <div class="diagram-container">
             <strong>סכמה 1: מפת קודקודים לבניית המגן הדינמי</strong><br><br>
             <svg class="diagram-svg" viewBox="0 0 300 200">
-                <!-- מגן נסיוני -->
                 <path d="M 150 20 C 220 20, 260 40, 260 100 C 260 150, 210 180, 150 195 C 90 180, 40 150, 40 100 C 40 40, 80 20, 150 20 Z" fill="#1e3a8a" stroke="#00f2fe" stroke-width="4"/>
                 <circle cx="150" cy="20" r="5" fill="#ffd700"/>
                 <circle cx="260" cy="100" r="5" fill="#ffd700"/>
@@ -263,7 +254,6 @@
         <p>כדי לתת למגן מראה של מגרש כדורגל בתנועה, נוסיף 3 קווים אופקיים שקופים במרכז המגן בגווני תכלת.</p>
     </div>
 
-    <!-- חלק 2: הכדור, הכתר והקשתות -->
     <div class="card">
         <h2>חלק ב': הכדור הגיאומטרי, הכתר וקשתות התנועה</h2>
         <p>במרכז המגן נמקם את הכדורגל המודרני, שמעליו כתר זהב ומתחתיו קשתות תנועה עוצמתיות.</p>
@@ -272,24 +262,17 @@
             💡 הנחיית עבודה: הכדור בנוי מחומש זהב מרכזי שממנו יוצאים קווי רשת לבנים לקודקודים ההיקפיים!
         </div>
 
-        <!-- סכמה שלב 2 -->
         <div class="diagram-container">
             <strong>סכמה 2: הרכבת הכדור הגיאומטרי והכתר</strong><br><br>
             <svg class="diagram-svg" viewBox="0 0 400 200">
-                <!-- כתר -->
                 <path d="M 200 30 L 210 50 L 230 45 L 215 65 L 200 55 L 185 65 L 170 45 L 190 50 Z" fill="#ffd700"/>
-                
-                <!-- מעגל חיצוני -->
                 <circle cx="200" cy="120" r="45" fill="none" stroke="#00f2fe" stroke-width="3"/>
-                <!-- חומש במרכז -->
                 <polygon points="200,100 218,112 210,134 190,134 182,112" fill="#ffd700"/>
-                <!-- קווי רשת -->
                 <line x1="200" y1="100" x2="200" y2="75" stroke="#fff" stroke-width="2"/>
                 <line x1="218" y1="112" x2="240" y2="105" stroke="#fff" stroke-width="2"/>
                 <line x1="210" y1="134" x2="228" y2="152" stroke="#fff" stroke-width="2"/>
                 <line x1="190" y1="134" x2="172" y2="152" stroke="#fff" stroke-width="2"/>
                 <line x1="182" y1="112" x2="160" y2="105" stroke="#fff" stroke-width="2"/>
-
                 <text x="200" y="20" fill="#ffd700" font-size="12" font-weight="bold" text-anchor="middle">1. כתר כוכב מוזהב בראש</text>
                 <text x="200" y="185" fill="#00f2fe" font-size="12" font-weight="bold" text-anchor="middle">2. חומש זהב מרכזי + קווי רשת</text>
             </svg>
@@ -303,7 +286,6 @@
         </ol>
     </div>
 
-    <!-- חלק 3: הטיפוגרפיה -->
     <div class="card">
         <h2>חלק ג': הטיפוגרפיה היוקרתית</h2>
         <ol class="instruction-list">
@@ -314,7 +296,6 @@
         </ol>
     </div>
 
-    <!-- משבצת קוד מול תוצאה מושלמת -->
     <div class="card">
         <h2>🔍 קוד ה-SVG מול התוצאה המושלמת</h2>
         <p>הנה השוואה בין הקוד הווקטורי המלא לבין הוויזואל הסופי שמתקבל מהעיצוב שלכם:</p>
@@ -322,45 +303,119 @@
         <div class="preview-grid">
             <div>
                 <strong>מבנה הקוד (SVG Code):</strong>
-                <div class="code-box">&lt;svg viewBox="0 0 800 650"&gt;
+                <div class="code-box">&lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 650" width="100%" height="100%"&gt;
   &lt;defs&gt;
-    &lt;linearGradient id="bgGrad"&gt;...&lt;/linearGradient&gt;
-    &lt;linearGradient id="goldGrad"&gt;...&lt;/linearGradient&gt;
-    &lt;linearGradient id="cyanGrad"&gt;...&lt;/linearGradient&gt;
+    &lt;!-- Background Gradient --&gt;
+    &lt;linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%"&gt;
+      &lt;stop offset="0%" stop-color="#0A1128" /&gt;
+      &lt;stop offset="50%" stop-color="#101F42" /&gt;
+      &lt;stop offset="100%" stop-color="#050B1A" /&gt;
+    &lt;/linearGradient&gt;
+
+    &lt;!-- Shield Gold/Cyan Metallic Gradient --&gt;
+    &lt;linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%"&gt;
+      &lt;stop offset="0%" stop-color="#FFD700" /&gt;
+      &lt;stop offset="50%" stop-color="#F59E0B" /&gt;
+      &lt;stop offset="100%" stop-color="#B45309" /&gt;
+    &lt;/linearGradient&gt;
+
+    &lt;linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="100%"&gt;
+      &lt;stop offset="0%" stop-color="#00F2FE" /&gt;
+      &lt;stop offset="100%" stop-color="#4FACFE" /&gt;
+    &lt;/linearGradient&gt;
+
+    &lt;linearGradient id="blueAccentGrad" x1="0%" y1="0%" x2="0%" y2="100%"&gt;
+      &lt;stop offset="0%" stop-color="#1E40AF" /&gt;
+      &lt;stop offset="100%" stop-color="#1E3A8A" /&gt;
+    &lt;/linearGradient&gt;
+
+    &lt;!-- Dynamic Glow &amp; Shadows --&gt;
+    &lt;filter id="glow" x="-20%" y="-20%" width="140%" height="140%"&gt;
+      &lt;feGaussianBlur stdDeviation="8" result="blur" /&gt;
+      &lt;feComposite in="SourceGraphic" in2="blur" operator="over" /&gt;
+    &lt;/filter&gt;
+
+    &lt;filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"&gt;
+      &lt;feDropShadow dx="0" dy="10" stdDeviation="10" flood-color="#000000" flood-opacity="0.5" /&gt;
+    &lt;/filter&gt;
   &lt;/defs&gt;
 
-  &lt;!-- רקע --&gt;
-  &lt;rect width="100%" height="100%" fill="url(#bgGrad)" /&gt;
+  &lt;!-- Background Canvas --&gt;
+  &lt;rect width="100%" height="100%" fill="url(#bgGrad)" rx="20" /&gt;
 
-  &lt;!-- המגן --&gt;
-  &lt;g transform="translate(400, 220)"&gt;
-    &lt;path id="shield-outer" stroke="url(#cyanGrad)" /&gt;
-    &lt;path id="shield-inner" fill="url(#blueAccentGrad)" /&gt;
-
-    &lt;!-- כתר ופסי מהירות --&gt;
-    &lt;path id="crown" fill="url(#goldGrad)" /&gt;
-
-    &lt;!-- כדורגל מודרני --&gt;
-    &lt;g id="football"&gt;
-      &lt;polygon id="pentagon" fill="url(#goldGrad)" /&gt;
-      &lt;path id="lines" stroke="#FFFFFF" /&gt;
-    &lt;/g&gt;
-
-    &lt;!-- קשתות תנועה --&gt;
-    &lt;path class="swoosh1" stroke="url(#cyanGrad)" /&gt;
-    &lt;path class="swoosh2" stroke="url(#goldGrad)" /&gt;
+  &lt;!-- Subtle Stadium Light Ray Pattern --&gt;
+  &lt;g opacity="0.05"&gt;
+    &lt;path d="M 0,0 L 800,650 M 800,0 L 0,650 M 400,0 L 400,650 M 0,325 L 800,325" stroke="#FFFFFF" stroke-width="3" /&gt;
   &lt;/g&gt;
 
-  &lt;!-- טקסט --&gt;
-  &lt;text x="400" y="460"&gt;ליגת העל&lt;/text&gt;
-  &lt;text x="400" y="505"&gt;ב כ ד ו ר ג ל&lt;/text&gt;
+  &lt;!-- Main Emblem Group --&gt;
+  &lt;g transform="translate(400, 220)" filter="url(#shadow)"&gt;
+
+    &lt;!-- Shield Outer Frame --&gt;
+    &lt;path d="M 0 -150 C 100 -150, 150 -120, 160 -40 C 160 60, 100 130, 0 170 C -100 130, -160 60, -160 -40 C -150 -120, -100 -150, 0 -150 Z" fill="none" stroke="url(#cyanGrad)" stroke-width="6" /&gt;
+
+    &lt;!-- Shield Inner Fill --&gt;
+    &lt;path d="M 0 -140 C 90 -140, 138 -112, 147 -38 C 147 53, 92 118, 0 155 C -92 118, -147 53, -147 -38 C -138 -112, -90 -140, 0 -140 Z" fill="url(#blueAccentGrad)" stroke="#1E293B" stroke-width="2" /&gt;
+
+    &lt;!-- Dynamic Speed Stripes / Football Field Motion Lines --&gt;
+    &lt;path d="M -110 -20 L 110 -20" stroke="url(#cyanGrad)" stroke-width="3" opacity="0.3" /&gt;
+    &lt;path d="M -125 10 L 125 10" stroke="url(#cyanGrad)" stroke-width="4" opacity="0.4" /&gt;
+    &lt;path d="M -110 40 L 110 40" stroke="url(#cyanGrad)" stroke-width="3" opacity="0.3" /&gt;
+
+    &lt;!-- Stylized Crown / Star Accent at Top --&gt;
+    &lt;path d="M 0 -125 L 12 -100 L 35 -105 L 18 -85 L 25 -60 L 0 -75 L -25 -60 L -18 -85 L -35 -105 L -12 -100 Z" fill="url(#goldGrad)" /&gt;
+
+    &lt;!-- Central Geometric Football (Modern Pentagram/Polygon Style) --&gt;
+    &lt;g transform="translate(0, -5)" filter="url(#glow)"&gt;
+      &lt;!-- Outer Ball Glow Ring --&gt;
+      &lt;circle cx="0" cy="0" r="55" fill="none" stroke="url(#cyanGrad)" stroke-width="3" opacity="0.8" /&gt;
+      
+      &lt;!-- Central Pentagon --&gt;
+      &lt;polygon points="0,-22 21,-7 13,18 -13,18 -21,-7" fill="url(#goldGrad)" /&gt;
+
+      &lt;!-- Surrounding Pentagons / Lines --&gt;
+      &lt;path d="M 0,-22 L 0,-48 M 21,-7 L 44,-17 M 13,18 L 32,38 M -13,18 L -32,38 M -21,-7 L -44,-17" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round" /&gt;
+      &lt;polygon points="0,-48 18,-40 21,-22 0,-22 -21,-22 -18,-40" fill="none" stroke="#FFFFFF" stroke-width="2" opacity="0.6" /&gt;
+      &lt;polygon points="44,-17 48,5 32,22 13,18 21,-7" fill="none" stroke="#FFFFFF" stroke-width="2" opacity="0.6" /&gt;
+      &lt;polygon points="-44,-17 -48,5 -32,22 -13,18 -21,-7" fill="none" stroke="#FFFFFF" stroke-width="2" opacity="0.6" /&gt;
+    &lt;/g&gt;
+
+    &lt;!-- Swoosh Arc (Motion / Israeli Flag Wave Motif) --&gt;
+    &lt;path d="M -130 50 C -60 120, 60 120, 140 30" fill="none" stroke="url(#cyanGrad)" stroke-width="7" stroke-linecap="round" /&gt;
+    &lt;path d="M -110 70 C -50 125, 50 125, 120 50" fill="none" stroke="url(#goldGrad)" stroke-width="4" stroke-linecap="round" /&gt;
+  &lt;/g&gt;
+
+  &lt;!-- Typography (Hebrew Text for Israeli Premier League) --&gt;
+  &lt;g text-anchor="middle" font-family="'Segoe UI', Rubik, Assistant, Arial, sans-serif" direction="rtl"&gt;
+    
+    &lt;!-- Main Title: ליגת העל --&gt;
+    &lt;text x="400" y="460" font-size="48" font-weight="900" fill="#FFFFFF" letter-spacing="1.5" filter="url(#shadow)"&gt;
+      ליגת העל
+    &lt;/text&gt;
+
+    &lt;!-- Subtitle: בכדורגל --&gt;
+    &lt;text x="400" y="505" font-size="24" font-weight="700" fill="#00F2FE" letter-spacing="3"&gt;
+      ב כ ד ו ר ג ל
+    &lt;/text&gt;
+
+    &lt;!-- Decorative Gold Divider --&gt;
+    &lt;g transform="translate(400, 525)"&gt;
+      &lt;line x1="-120" y1="0" x2="120" y2="0" stroke="url(#goldGrad)" stroke-width="2" stroke-linecap="round" /&gt;
+      &lt;polygon points="0,-5 5,0 0,5 -5,0" fill="#FFD700" /&gt;
+    &lt;/g&gt;
+
+    &lt;!-- Tagline / Organization Name --&gt;
+    &lt;text x="400" y="565" font-size="16" font-weight="600" fill="#94A3B8" letter-spacing="1"&gt;
+      המנהלת לכדורגל מקצועני בישראל
+    &lt;/text&gt;
+  &lt;/g&gt;
 &lt;/svg&gt;</div>
             </div>
 
             <div>
                 <strong>התוצאה הוויזואלית המושלמת:</strong>
                 <div class="result-box">
-                    <svg viewBox="0 0 800 650" xmlns="http://www.w3.org/2000/svg">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 650" width="100%" height="100%">
                       <defs>
                         <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
                           <stop offset="0%" stop-color="#0A1128" />
@@ -440,7 +495,6 @@
 
 </div>
 
-<!-- חלונית צפה מטורללת עם האוואטר המפנה לבוט -->
 <a href="https://gemini.google.com/gem/12Z7LVe1nfZ4yPIMzVAXQT1TGkSrVQZ11?usp=sharing" target="_blank" class="floating-bot" title="צריך עזרה? דבר איתי!">
     <img src="https://lh3.googleusercontent.com/d/1BHxytxfATgrv3wpk_8slqpRX08p2Dzml" alt="Help Bot">
     <span class="floating-bot-text">צריך עזרה? לחץ לבוט הלימוד 💬</span>
